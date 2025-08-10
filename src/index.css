@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+  --bg:#0f1724;
+  --card:#0b1a2b;
+  --muted:#9aa6b2;
+  --accent:#4f46e5; /* change to your primary color */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+
+*{box-sizing:border-box}
+body{
+  background:linear-gradient(180deg, var(--bg), #071026);
+  color:#e6eef6;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Navbar spacing */
+.navbar{
+  background: rgba(2,6,23,0.65) !important;
+  backdrop-filter: blur(6px);
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display:flex;
+  align-items:center;
+  padding-top:80px;
+}
+
+/* Cards */
+.card-custom{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius:12px;
+  padding:18px;
+}
+
+/* Project image */
+.project-thumb{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* Skill badge */
+.skill-badge{
+  display:inline-block;
+  padding:8px 12px;
+  margin:6px 6px 6px 0;
+  border-radius:999px;
+  background: rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.03);
+  font-weight:600;
+}
+
+/* Footer */
+footer{
+  padding:28px 0;
+  color:var(--muted);
+}
+
+/* Responsive tweaks */
+@media (max-width:768px){
+  .project-thumb{ height:160px;}
+  .hero{ padding-top:90px;}
 }
